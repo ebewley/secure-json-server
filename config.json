@@ -1,0 +1,80 @@
+{
+  "certificateFile": "P:/BSP/Certificates/self-signed-certificate.pem",
+  "certificateKeyFile": "P:/BSP/Certificates/self-signed-certificate.key",
+  "logging": "verbose",
+  "modules": [
+    {
+      "name": "auth",
+      "path": "./middlewares/auth",
+      "handlers": [
+        {
+          "method": "authenticate",
+          "name": "auth/authenticate",
+          "onInit": "module.config(appConfiguration)",
+          "route": "/api/v1/authenticate",
+          "routeType": "POST"
+        },
+        {
+          "method": "isAuthorized",
+          "name": "auth/isAuthorized"
+        }
+      ]
+    },
+    {
+      "name": "all animals",
+      "path": "./middlewares/animals",
+      "handlers": [
+        {
+          "isPublic": true,
+          "method": "cats",
+          "name": "animals/cats getter",
+          "route": "/api/v1/cats",
+          "routeTest": "^/api/v1/cats(/.*)?$",
+          "routeType": "GET"
+        },
+        {
+          "method": "dogs",
+          "name": "animals/dogs getter",
+          "route": "/api/v1/dogs",
+          "routeTest": "/api/v3/*",
+          "routeRewrite": "/$1",
+          "routeType": "GET"
+        }
+      ]
+    },
+    {
+      "name": "cars getter",
+      "path": "./middlewares/cars",
+      "handlers": [
+        {
+          "isPublic": true,
+          "name": "cars getter",
+          "route": "/api/v1/cars",
+          "routeType": "GET"
+        }
+      ]
+    },
+    {
+      "name": "sample-pass-thru",
+      "path": "./middlewares/sample-pass-thru",
+      "handlers": [
+        {
+          "isPublic": true,
+          "route": "/api/v1/sample-pass-thru"
+        }
+      ]
+    }
+  ],
+  "port": 40001,
+  "publicRoutes": [
+    "^/internal/v[0-9]{1,}/[a-zA-Z]",
+    "^/api/v1/colors(/.*)?$",
+    "^/api/v1/salutations(/.*)?$"
+  ],
+  "privateRoutes": {
+    "/api/v1/*": "/$1",
+    "/api/v2/*": "/$1",
+    "/internal/v1/:resource/:id": "/:resource/:id"
+  },
+  "users": [{ "username": "ebewley", "password": "letMeIn1" }]
+}

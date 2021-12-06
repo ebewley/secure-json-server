@@ -1,0 +1,115 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Hyundai",
+      "model": "Santa Fe Limited Ultimate AWD",
+      "year": 2017
+    },
+    {
+      "id": 2,
+      "brand": "Hyundai",
+      "model": "Santa Fe Sport AWD",
+      "year": 2013
+    }
+  ],
+  "cats": [
+    {
+      "id": 1,
+      "breed": "Orange Tabby"
+    },
+    {
+      "id": 2,
+      "breed": "Minx"
+    }
+  ],
+  "dogs": [
+    {
+      "id": 1,
+      "breed": "Rat Terrier"
+    },
+    {
+      "id": 2,
+      "breed": "Great Dane"
+    }
+  ],
+  "members": [
+    {
+      "id": 1,
+      "givenName": "Eric",
+      "middleNames": "James Vincent",
+      "surname": "Bewley",
+      "birthdate": "1970-01-24",
+      "birthplace": {
+        "cityID": 205,
+        "countryID": 1,
+        "stateID": 14
+      },
+      "createdDate": "2021-11-01T14:15:32.123",
+      "modifiedDate": "2021-12-01T08:18:21.100"
+    },
+    {
+      "id": 2,
+      "givenName": "Natalie",
+      "middleNames": "Le-Yang",
+      "surname": "Bewley",
+      "birthdate": "2015-07-30",
+      "birthplace": {
+        "cityID": 12,
+        "countryID": 1,
+        "stateID": 24
+      },
+      "createdDate": "2021-11-01T14:15:32.123",
+      "modifiedDate": "2021-12-01T08:18:21.100"
+    },
+    {
+      "id": 3,
+      "givenName": "Milla",
+      "middleNames": "Le-Mi",
+      "surname": "Bewley",
+      "birthdate": "2017-05-10",
+      "birthplace": {
+        "cityID": 12,
+        "countryID": 1,
+        "stateID": 24
+      },
+      "createdDate": "2021-11-01T15:16:33.124",
+      "modifiedDate": "2021-12-01T08:18:21.100"
+    }
+  ],
+  "orgMembers": [
+    {
+      "id": 1,
+      "name": "Bewley Software Productions, Inc.",
+      "commonName": "Bewley Software",
+      "acronym": "BSP",
+      "createdDate": "2021-11-01T15:16:33.124",
+      "modifiedDate": "2021-12-01T08:18:21.100"
+    },
+    {
+      "id": 2,
+      "name": "FOCO Enterprise, LLC",
+      "commonName": "FOCO Enterprise",
+      "createdDate": "2021-11-01T15:16:33.124",
+      "modifiedDate": "2021-12-01T08:18:21.100"
+    }
+  ],
+  "sample-pass-thru": [
+    {
+      "id": 1,
+      "hello": "world"
+    }
+  ],
+  "sessions": [
+    {
+      "sessionID": "ddddddddddddddddddddddd",
+      "id": "ebewley"
+    },
+    {
+      "id": "natalie",
+      "createdDate": "2021-12-05",
+      "sessionID": "ddddddddddddddddddddddd",
+      "internalId": "v1"
+    }
+  ]
+}
